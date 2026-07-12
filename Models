@@ -4,6 +4,11 @@ models/README.md
 This directory contains the IFC and GIS model files supporting the prototype implementation described in the associated paper.
 
 ## Contents
-
-- `IFC/`: IFC model files
-- `GIS/`: GIS datasets and project files
+models/
+├── README.md
+├── IFC/
+│   ├── model_01.ifc
+│   └── model_02.ifc
+└── GIS/
+    ├── project.qgz
+    └── data/
