@@ -1,0 +1,9 @@
+models/README.md
+# Model files
+
+This directory contains the IFC and GIS model files supporting the prototype implementation described in the associated paper.
+
+## Contents
+
+- `IFC/`: IFC model files
+- `GIS/`: GIS datasets and project files
