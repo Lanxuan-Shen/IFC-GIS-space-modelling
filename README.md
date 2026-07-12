@@ -8,18 +8,9 @@ This repository contains the IFC files, IfcOpenShell scripts, and GIS files supp
 Extending IFC for 3D Land and Property Data Management in Underground Infrastructure Projects.
 
 ## Repository contents
-├── models/
-│   ├── IFC/
-│   │   └── Underground_drawing_0619_integrated.ifc
-│   └── GIS/
-│       └── GISmodel_7_12.qgz
-└── scripts/
-    └── IFC_Integration.ipynb
-
-
-- `IFC/`: IFC models used for the prototype
-- `scripts/`: IfcOpenShell processing scripts
-- `GIS/`: GIS datasets and project files
+- `IFC/`: IFC models used for the prototype - Underground_drawing_0619_integrated.ifc
+- `scripts/`: IfcOpenShell processing scripts - IFC_Integration.ipynb
+- `GIS/`: GIS datasets and project files - GISmodel_7_12.qgz
 
 ## Requirements
 
