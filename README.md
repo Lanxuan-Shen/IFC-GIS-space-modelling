@@ -25,7 +25,7 @@ SHA-256 of `Model_V1.0.6.ifc`: `f0e5c315368b68a9520e3b80123d0aedf4c8c2d465fb64b3
 
 ## Validation and inspection
 
-- The file was checked with the buildingSMART Validation Service in October 2026 (report in `validation/`). It was reported Valid for STEP syntax, IFC schema, normative IFC rules and industry practices. The report header also displayed a warning alongside the MVD declarations CoordinationView and QuantityTakeOffAddOnView.
+- The file was checked with the buildingSMART Validation Service in November 2026 (report in `validation/`). It was reported Valid for STEP syntax, IFC schema, normative IFC rules and industry practices. The report header also displayed a warning alongside the MVD declarations CoordinationView and QuantityTakeOffAddOnView.
 - The file was opened in BIMvision 3.1.2 and Solibri 25.12.0.83. In both viewers, the five legal-space instances could be located, and their IfcSpatialZone entity type, ObjectType values and populated property sets were accessible. Legal–physical associations were not retrieved through either viewer's interface; they can be inspected in the STEP text (#115251–#115253) or with `scripts/verify_associations.py`:
 
 ```
