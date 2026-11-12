@@ -9,7 +9,7 @@ Shen, L., Atazadeh, B., Ho, S., & Rajabifard, A. *Extending IFC for 3D Land and 
 | Path | Description |
 |---|---|
 | `Model_V1.0.6.ifc` | IFC file examined in Section 6 of the paper (schema IFC4X3_ADD2). |
-| `scripts/` | IfcOpenShell scripts used to write the legal–physical associations and georeferencing, and to extract the associations reported in Section 6.3. |
+| `scripts/verify_associations.py` | Python script that extracts the legal–physical associations in `Model_V1.0.6.ifc` and reproduces the counts reported in Section 6.3. |
 | `GIS/` | QGIS project and layers used for the GIS views (Figures 8a and 9). |
 | `validation/` | buildingSMART Validation Service report for `Model_V1.0.6.ifc`. |
 
@@ -26,17 +26,20 @@ SHA-256 of `Model_V1.0.6.ifc`: `f0e5c315368b68a9520e3b80123d0aedf4c8c2d465fb64b3
 ## Validation and inspection
 
 - The file was checked with the buildingSMART Validation Service in October 2026 (report in `validation/`). It was reported Valid for STEP syntax, IFC schema, normative IFC rules and industry practices. The report header also displayed a warning alongside the MVD declarations CoordinationView and QuantityTakeOffAddOnView.
-- The file was opened in BIMvision 3.1.2 and Solibri 25.12.0.83. In both viewers, the five legal-space instances could be located, and their IfcSpatialZone entity type, ObjectType values and populated property sets were accessible. Legal–physical associations were not retrieved through either viewer's interface; they can be inspected in the STEP text (#115251–#115253) or with the scripts in `scripts/`.
+- The file was opened in BIMvision 3.1.2 and Solibri 25.12.0.83. In both viewers, the five legal-space instances could be located, and their IfcSpatialZone entity type, ObjectType values and populated property sets were accessible. Legal–physical associations were not retrieved through either viewer's interface; they can be inspected in the STEP text (#115251–#115253) or with `scripts/verify_associations.py`:
+
+```
+python scripts/verify_associations.py Model_V1.0.6.ifc
+```
 
 ## Requirements
 
-- Python 3.13.13
-- IfcOpenShell 0.8.5
-- QGIS 4.0.1
+- Python 3 with IfcOpenShell (`verify_associations.py` was tested with IfcOpenShell 0.9.0)
+- QGIS 4.0.1 for the GIS project
 
 ## Not included
 
-The source survey plans (Original Plans) and the Revit model are not redistributed. The remaining data supporting the findings of the study are available from the corresponding author upon reasonable request.
+The source survey plans (Original Plans), the Revit model and the IfcOpenShell post-processing scripts used to create the IFC file are not redistributed. The remaining data supporting the findings of the study are available from the corresponding author upon reasonable request.
 
 ## Licence and data sources
 
